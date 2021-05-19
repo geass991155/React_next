@@ -1,0 +1,178 @@
+@import '../../styles/global';
+
+.fantitle {
+  // width: 150%;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 50px 20px 0px 50px;
+  background-image: linear-gradient(150deg, #13547a 0%, #80d0c7 100%);
+
+  h1 {
+    position: relative;
+    
+    width: 90%;
+    @media screen and (max-width: 768px) { 
+      font-size:24px;
+      padding: 10px 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 20px 60px;
+    }
+  }
+
+}
+
+.fan {
+  transition: transform 0.4s ease-out;
+  position: relative;
+  // padding: 10px 60px 40%
+  overflow: hidden;
+  &:hover{
+    img {
+      opacity: .5;
+    }
+    .imgcontent {
+      @media screen and (max-width: 767px) {
+        transform:translateY(-78%);
+      }
+      @media screen and (min-width: 768px) { 
+        transform:translateY(-60%);
+      }
+      @media screen and (min-width: 1024px) { 
+        transform:translateY(-60%);
+      }
+      @media screen and (min-width: 1920px) {
+        transform:translateY(-27%);
+      }
+    }
+    .fantitle {
+      box-shadow: 1px 10px 10px #cccccc;
+    }
+  }
+
+  @media screen and (min-width: 768px) { 
+    width: 100%;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+  }
+    
+
+
+  img {
+    border-radius: 0px 0px 20px 0px;
+    // z-index: -1;
+    max-width: 80%;
+    position: relative;
+    left: 19.55%;
+    top: -29px;
+    padding:5px;
+  }
+
+  .imgcontent{
+    transition: transform 0.4s ease-out;    
+    transform: translate(0%, 150%);
+    color: #575757;
+    position: absolute;
+    text-align:center;
+    
+    background-image: linear-gradient(-225deg, #b7f8db83 0%, #50a7c29d 100%);
+
+    @media screen and (max-width: 767px) {
+      left: 21%;
+      top: 79%;
+      width: 79%;
+      font-size:12px;
+      padding: 0px 0px 10px 0px;
+      border-radius: 0px 0px 10px 0px;
+    }
+    @media screen and (min-width: 768px) { 
+      left: 20.5%;
+      top: 80%;
+      width: 79.5%;
+      padding: 5px 0px 5px 0px;
+      border-radius: 0px 0px 10px 0px;
+    }
+    @media screen and (min-width: 1024px) { 
+      left: 20.5%;
+      top: 80%;
+      width: 80%;
+      font-size:20px;
+      padding: 5px 0px 30px 0px;
+      border-radius: 0px 0px 20px 0px;
+    }
+    @media screen and (min-width: 1920px) {
+      left: 20%;
+      top: 80%;
+      width: 79%;
+      padding: 5px 10px 50px 0px;
+      border-radius: 0px 0px 15px 0px;
+    }
+  }
+
+  .arrowbox {
+    position: absolute;
+    border: 5px #259ea79d solid;
+    border-radius: 100px;
+  
+    .arrow {
+      background-color: transparent;
+      border-color: #259ea79d;
+      border-style: solid;
+      
+      transform: rotate(45deg);
+
+      @media screen and (max-width: 767px) {
+        width: 40%;
+        height: 40%;
+        border-width: 5px 5px 0 0;
+        margin: 7px 9px 8px 5px;
+      }
+      @media screen and (min-width: 768px) { 
+        width: 40%;
+        height: 40%;
+        border-width: 7px 7px 0 0;
+        margin: 15px 9px 8px 9px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 40%;
+        height: 40%;
+        border-width: 10px 10px 0 0;
+        margin: 13px 10px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 30px;
+      height: 30px;
+      left: 88%;
+      top: 22px;
+    }
+    @media screen and (min-width: 768px) { 
+      width: 60px;
+      height: 60px;
+      left: 88%;
+      top: 28px;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 60px;
+      height: 60px;
+      left: 91%;
+      top: 28px;
+    }
+  }
+  
+  .singtext {
+    color: rgb(150, 148, 148);
+    writing-mode: vertical-lr;
+    position: absolute;
+    top: 20%;
+    font-size: 80px;
+    line-height: 300%;
+    letter-spacing: 50px;
+   }
+}
+
+

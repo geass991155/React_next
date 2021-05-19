@@ -1,0 +1,103 @@
+.submenuWrapper {
+  width: auto;
+  // box-shadow: 25px 30px 30px 0 rgba(209, 28, 28, 0.966);
+  float: left;
+  @media screen and (max-width: 767px) {
+    // display: none;
+  }
+  @media screen and (min-width: 768px) {
+    padding-right: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-right: 1350px;
+  }
+  @media screen and (min-width: 1920px) {
+    // padding-right: calc((100% - 1493px) );
+    // padding-right: 135px;
+  }
+}
+
+.submenu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+
+  a {
+    font-family:monospace;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    // font-weight: 100; 
+    text-align: center;
+    position: relative;
+    transition: background-color 0.4s ease-in-out, top 0.4s ease-in-out;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -85px;
+      z-index: -1;
+      border-radius: 117px; //圓角邊
+      background-color: #EE8A51;
+      transition: background-color 0.4s ease-in-out, top 0.4s ease-in-out;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: #ff5c2a;
+      &::before {
+        background-color: rgba(245, 176, 86, 0.733);
+        top: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .submenu {
+    // width: 659px;
+    // padding: 0 calc((687px - 659px) / 2);
+    a {
+      width: 200px;
+      height: 76px;
+      padding-top: 25px;
+      font-size: 1.75rem;
+      z-index: 2;
+     
+      &::before {
+        width: 158px;
+        height: 158px;
+        left: calc((725px - 687px) / 2);
+      }
+    }
+  }
+}
+// @media all and (min-width: 768px) and (max-width: 1439px) {
+//   .submenu {
+//     width: 485px;
+//     padding: 0 calc((505px - 485px) / 2);
+//     a {
+//       width: calc(117px - 20px);
+//       height: 56px;
+//       padding-top: 17px;
+//       font-size: 1.25rem;
+//       &[href*='en/'] {
+//         font-size: 1rem;
+//         padding-top: 25px;
+//       }
+//       &::before {
+//         width: 117px;
+//         height: 117px;
+//         left: calc((485px - 505px) / 2);
+//       }
+//     }
+//   }
+// }
+
+@media print {
+  .submenuWrapper {
+    display: none;
+  }
+}

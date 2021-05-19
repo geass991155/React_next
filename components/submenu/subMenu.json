@@ -1,0 +1,46 @@
+{
+  "ch": [
+    {
+      "name": "card",
+      "href": "/card"
+    },
+    {
+      "name": "story",
+      "href": "/story"
+    },
+    {
+      "name": "product",
+      "href": "/product"
+    },
+    {
+      "name": "news",
+      "href": "/news"
+    },
+    {
+      "name": "activty",
+      "href": "/activty"
+    }
+  ],
+  "en": [
+    {
+      "name": "visit",
+      "href": "/visit/open-hours"
+    },
+    {
+      "name": "exhibitions",
+      "href": "/exhibitions/current-exhibitions"
+    },
+    {
+      "name": "events",
+      "href": "/events/international-forums"
+    },
+    {
+      "name": "collections",
+      "href": "/collections/about-collection"
+    },
+    {
+      "name": "library",
+      "href": "/library/visitor-information"
+    }
+  ]
+}

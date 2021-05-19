@@ -1,0 +1,18 @@
+@import '../../styles/global';
+
+.cardList {
+  display: flex; /*容器、區塊，flex做宣告*/
+  flex-wrap: wrap; /*空間不夠換行*/
+  align-items: center;
+  
+  justify-content: center; 
+  @media all and (max-width: 689px) {
+    margin: 0px 0px 50px 0px;
+  }
+  @media all and (min-width: 690px) {
+    margin: 50px;
+  }
+  @media all and (min-width: 1280px) {
+    margin: 50px auto;
+  }
+}

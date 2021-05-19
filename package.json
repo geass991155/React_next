@@ -1,0 +1,24 @@
+{
+  "name": "rect_next",
+  "version": "1.0.0",
+  "description": "next測試",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 8000 -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start  -p $PORT -H 0.0.0.0",
+    "export": "next build && next export",
+    "test": "exit"
+  },
+  "author": "kelly",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "intersection-observer": "^0.11.0",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {}
+}

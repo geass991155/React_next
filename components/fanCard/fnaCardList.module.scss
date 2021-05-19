@@ -1,0 +1,284 @@
+@import '../../styles/global';
+
+.embed_container {
+    position: relative; /*定位，relative相對定位*/
+    height: 0;
+    overflow: hidden;
+    svg {
+      width: 100%;
+      @media all and (max-width: 767px) {
+        height: 51vw;
+      }
+      @media all and (min-width: 768px) and (max-width: 959px) {
+        height: 46vw;
+      }
+      @media all and (min-width: 960px) and (max-width: 1439px) {
+        height: 34vw;
+      }
+      @media all and (min-width: 1440px) {
+        height: 29.5vw;
+        max-height: 571px;
+      }
+      rect {
+        fill: #ffffff;
+        opacity: 1;
+        transition: opacity 0.8s;
+      }
+      image {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    @media all and (max-width: 767px) {
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: unset;
+      }
+    }
+    @media all and (min-width: 768px) {
+      svg + img {
+        display: none;
+      }
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        max-height: unset;
+      }
+    }
+    
+  }
+
+/* CardList */
+.cardList {
+    display: flex; /*容器、區塊，flex做宣告*/
+    flex-wrap: wrap; /*空間不夠換行*/
+    align-items: stretch; /*副軸對齊*/
+  
+    @media all and (max-width: 689px) {
+      margin-bottom: -50px;
+    }
+    @media all and (min-width: 690px) {
+      margin: 0 -10px -50px;
+    }
+    @media all and (min-width: 1280px) {
+      margin: 0 -15px -100px;
+    }
+  
+    .card {
+      border-radius: 15px; /*圓角*/
+      background-color: #c9c6c6a2;
+      transition: box-shadow 0.3s;
+      @media all and (max-width: 689px) {
+        width: 100%;
+        max-width: 478px;
+        margin: 0 auto 50px;
+      }
+      @media all and (min-width: 690px) {
+        width: calc((100% - 42px) / 2);
+        margin: 0 10px 50px;
+      }
+      @media all and (min-width: 1280px) {
+        width: calc((100% - 93px) / 3);
+        margin: 0 15px 100px;
+      }
+      
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: 0 20px 20px rgba(255, 1, 1, 0.13); /*陰影*/
+        .subject {
+          color: $taoyuan;
+          text-decoration:none;
+        }
+        .desc {
+          color: #282222;
+        }
+        .cat {
+          background-position: 0 -40px, 0 0;
+        }
+      }
+      figure {
+        border-radius: 15px; /*元素外邊框，圓角*/
+        & > div {
+          border-radius: 15px 15px 0 0;
+          overflow: hidden;
+        }
+      }
+      figcaption {
+        box-sizing: border-box; /*border及padding為內含或外加，border-box內含*/
+        position: relative; /*定位，relative相對定位*/
+        border-radius: 0 0 15px 15px;
+        @media all and (max-width: 689px) {
+          padding: 18px 24px;
+        }
+        @media all and (min-width: 690px) {
+          min-height: 115px;
+          padding: 18px 24px;
+        }
+        @media all and (min-width: 1280px) {
+          min-height: 160px;
+          padding: 10px 40px;
+        }
+      }
+      .subject {
+        color: #282222;
+        line-height: 1.35;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        transition: color 0.3s;
+        @media all and (max-width: 1279px) {
+          font-size: 1.125rem;
+          margin-bottom: 15px;
+        }
+        @media all and (min-width: 1280px) {
+          font-size: 1.75rem;
+          margin-bottom: 10px;
+        }
+      }
+      &.halfCard {
+        figcaption {
+          @media all and (max-width: 1279px) {
+            min-height: 92px;
+          }
+          @media all and (min-width: 1280px) {
+            min-height: 118px;
+          }
+        }
+        .subject {
+          margin-bottom: 0;
+          @media all and (max-width: 1279px) {
+            font-size: 1rem;
+          }
+          @media all and (min-width: 1280px) {
+            font-size: 1.25rem;
+          }
+        }
+      }
+      .desc {
+        color: #727272;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        transition: color 0.3s;
+        @media all and (max-width: 1279px) {
+          font-size: 1rem;
+          -webkit-line-clamp: 4;
+          height: 7em;
+        }
+        @media all and (min-width: 1280px) {
+          font-size: 1.25rem;
+          -webkit-line-clamp: 3;
+          height: 5em;
+        }
+      }
+      .date {
+        color: #1e1118;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        @media all and (max-width: 1279px) {
+          font-size: 1.125rem;
+        }
+        @media all and (min-width: 1280px) {
+          font-size: 1.5rem;
+        }
+      }
+      .cat {
+        border-radius: 20px 10px 0 40px;
+        background-image: linear-gradient(
+            to right,
+            rgba(61, 61, 63, 1) 0%,
+            rgba(125, 125, 126, 1) 100%
+          ),
+          linear-gradient(to right, $taoyuan 0%, $taoyuan 100%);
+        background-repeat: no-repeat;
+        background-position: 0 0, 0 40px;
+        color: #ffffff;
+        text-align: center;
+        position: absolute;
+        width: 27.426%;
+        min-width: 100px;
+        max-width: 131px;
+        transition: background-position 0.3s;
+  
+        @media all and (max-width: 959px) {
+          height: 31px;
+          line-height: 31px;
+          top: -31px;
+          right: -7px;
+          font-size: 0.875rem;
+        }
+        @media all and (min-width: 960px) {
+          height: 40px;
+          line-height: 38px;
+          top: -19px;
+          right: -10px;
+          font-size: 1.25rem;
+        }
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: #3d3d3f transparent transparent transparent;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          @media all and (max-width: 1279px) {
+            border-width: 7px 7px 0 0;
+          }
+          @media all and (min-width: 1280px) {
+            border-width: 10px 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+.longHeigth {
+    composes: embed_container;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 73.275%;
+    & + figcaption {
+        height: calc(100% - 73.275%);
+    }
+}
+.shortHeigth {
+    composes: embed_container;
+    width: 100%;
+    padding-bottom: 56.11%;
+}
+// .coverImg {
+//     width: 100%;
+//     text-align: center;
+//     @media all and (max-width: 767px) {
+//       margin-top: 16px;
+//     }
+//     @media all and (min-width: 768px) {
+//       margin-top: 20px;
+//     }
+//     img {
+//       width: auto;
+//       max-width: 100%;
+//       height: auto;
+//       max-height: 100%;
+//       margin: auto;
+//     }
+//   }
