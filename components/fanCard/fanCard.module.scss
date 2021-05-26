@@ -165,13 +165,15 @@
   }
   
   .singtext {
+    width: 100%;
     color: rgb(150, 148, 148);
     writing-mode: vertical-lr;
     position: absolute;
     top: 20%;
-    font-size: 80px;
+    font-size: 5vh;
     line-height: 300%;
     letter-spacing: 50px;
+
    }
 }
 

@@ -16,3 +16,23 @@
     margin: 50px auto;
   }
 }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  
+}
+
+/* Cards */
+.cardcolumn {
+  position: relative;
+  width: 50%;
+  // float: left;
+  padding: 4%;
+  box-sizing: border-box;
+  
+  @media screen and (max-width: 767px) {
+    width: 90%;
+  }
+}

@@ -17,17 +17,28 @@ const Card = ({
 }) => {
   
   const children = (  
-    <div className={styles.card}>
-      <div className={styles.border}></div>
-      <img src={'https://i.imgur.com/6dbHwdn.png'} />
-      <h1>{subject}</h1>
-      <h3>120 測試測試</h3>
-    </div>
+    // <>
+    // <div className={styles.card}>
+    //   <div className={styles.border}></div>
+    //   <img src={'https://i.imgur.com/6dbHwdn.png'} />
+    //   <h1>{subject}</h1>
+    //   <h3>120 測試測試</h3>
+    // </div>
+    // </>
+    <>
+     
+        <div className={styles.card}>
+          <div className={styles.border}></div>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+          <h1>{subject}</h1>
+          <h2>120 測試測試</h2>
+        </div>
+        
+      </>
   );
 
   if (isOut) {
     return (
-      <div className={styles.cardlist}>
         <a
           href={to}
           title={`另開新分頁`}
@@ -36,7 +47,6 @@ const Card = ({
         >
           {children}
         </a>
-      </div>
     );
   }
 

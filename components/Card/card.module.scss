@@ -1,55 +1,22 @@
 @import '../../styles/global';
 
-.cardlist {
-  position: relative;
-  
-  @media screen and (max-width: 767px) {
-    margin: 60px 0px 0px 40px;
-    width: 100%;
-  }
-  @media screen and (min-width: 768px) { 
-    width: calc((100% - 42px) / 2);
-    margin: 0 50px 50px;
-  }
-  @media screen and (min-width: 1024px) { 
-    width: calc((100% - 42px) / 3);
-    margin: 0 50px 50px;
-  }
-  @media screen and (min-width: 1920px) {
-    width: calc((100% - 500px) / 3);
-  }
-}
 .card {
-  width: 100%;
+  width: 92%;
+  max-width: 340px;
   position: relative;
-  color: #fff;
-  margin: auto;
-  // background-image: linear-gradient(160deg, #f6d365 0%, #fda085 100%);
   background-image: linear-gradient(150deg, #13547a 0%, #80d0c7 100%);
-  transform:scale(1,1);
-  transition: all 0.4s ease-out;
+  color: rgb(112, 78, 78);
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+
   &:hover{
     transform:scale(1.1,1.1);
     .border{
       box-shadow:3px 3px 10px 7px #cccccc;
     }
   }
-}
 
-.card h1 {
-  position: relative;
-  padding: 210px 0px 50px 50px;
-  width: 90%;
-}
-
-.card > img {
-  width: 100%;
-  position: absolute;
-  top: -6%;
-  left: -6%;
-  // border:1px #ca6721 solid;
-  border:1px #13547a solid;
-  padding:5px;
 }
 
 .border {
@@ -57,15 +24,107 @@
   width: 100%;
   height: 100%;
   padding: 6px;
-  // border: 1px solid #5a3c27;
   border: 1px solid #13547a;
   opacity: 0.5;
   left: -6px;
   top: -6px;
+  transition: opacity 200ms linear, transform 200ms ease-out;
 }
 
-.card h3 {
+.card h1 {
   position: relative;
-  top: -60px;
-  left: 50px;
+  padding: 190px 0px 100px 10px;
+  width: 90%;
+  
+  transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
 }
+
+.card h2 {
+  position: relative;
+  width: 90%;
+  top: -60px;
+  transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+.card > img {
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+  border:1px #13547a solid;
+  padding:5px;
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+
+// .cardlist {
+//   position: relative;
+  
+//   @media screen and (max-width: 767px) {
+//     margin: 60px 0px 0px 40px;
+//     width: 100%;
+//   }
+//   @media screen and (min-width: 768px) { 
+//     width: calc((100% - 42px) / 2);
+//     margin: 0 50px 50px;
+//   }
+//   @media screen and (min-width: 1024px) { 
+//     width: calc((100% - 42px) / 3);
+//     margin: 0 50px 50px;
+//   }
+//   @media screen and (min-width: 1920px) {
+//     width: calc((100% - 500px) / 3);
+//   }
+// }
+// .card {
+//   width: 100%;
+//   position: relative;
+//   color: #fff;
+//   margin: auto;
+//   // background-image: linear-gradient(160deg, #f6d365 0%, #fda085 100%);
+//   background-image: linear-gradient(150deg, #13547a 0%, #80d0c7 100%);
+//   transform:scale(1,1);
+//   transition: all 0.4s ease-out;
+//   &:hover{
+//     transform:scale(1.1,1.1);
+//     .border{
+//       box-shadow:3px 3px 10px 7px #cccccc;
+//     }
+//   }
+// }
+
+// .card h1 {
+//   position: relative;
+//   padding: 210px 0px 50px 50px;
+//   width: 90%;
+// }
+
+// .card > img {
+//   width: 100%;
+//   position: absolute;
+//   top: -6%;
+//   left: -6%;
+//   // border:1px #ca6721 solid;
+//   border:1px #13547a solid;
+//   padding:5px;
+// }
+
+// .border {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   padding: 6px;
+//   // border: 1px solid #5a3c27;
+//   border: 1px solid #13547a;
+//   opacity: 0.5;
+//   left: -6px;
+//   top: -6px;
+// }
+
+// .card h3 {
+//   position: relative;
+//   top: -60px;
+//   left: 50px;
+// }

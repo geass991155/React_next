@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../components/Card/Card.js'
 import CardList from '../components/Card/Cardlist.js'
+import FanCardList from '../components/fanCard/fanCardlist.js'
 import FanCard from '../components/fanCard/fanCard.js'
 import ScrollTop from '../components/scrollTop/scrollTop'
 import { useRouter } from "next/router";
@@ -37,7 +38,7 @@ const firstpage = ({ data }) => {
       />
     ));
 
-    const items = data.map((e, index) => (
+    const items = fancontent.map((e, index) => (
       <Card
         key={`${asPath}/${e.index}`}
         to={`card/${e.id}`}
@@ -57,9 +58,9 @@ const firstpage = ({ data }) => {
         <CardList>
           {items}
         </CardList>
-        <CardList>
+        <FanCardList>
           {fanitems}
-        </CardList>
+        </FanCardList>
         <ScrollTop />
       </Main>
     </>
