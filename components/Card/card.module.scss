@@ -1,6 +1,8 @@
 @import '../../styles/global';
 
 .card {
+  margin: 50px;
+  float: left;
   width: 92%;
   max-width: 340px;
   position: relative;
@@ -11,9 +13,12 @@
   transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
 
   &:hover{
-    transform:scale(1.1,1.1);
-    .border{
+    // transform:scale(1.1,1.1);
+    .border {
       box-shadow:3px 3px 10px 7px #cccccc;
+    }
+    .arrowbox{
+      box-shadow:3px 3px 10px 7px rgba(103, 150, 144, 0.26);
     }
   }
 
@@ -33,7 +38,7 @@
 
 .card h1 {
   position: relative;
-  padding: 190px 0px 100px 10px;
+  padding: 190px 0px 80px 10px;
   width: 90%;
   
   transform: translate3d(20%, 0px, 0px);  
@@ -44,7 +49,7 @@
   position: relative;
   width: 90%;
   top: -60px;
-  transform: translate3d(20%, 0px, 0px);  
+  transform: translate3d(25%, 0px, 0px);  
   transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
 }
 
@@ -56,6 +61,28 @@
   border:1px #13547a solid;
   padding:5px;
   transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+.arrowbox {
+  position: relative;
+  border: 5px #259ea79d solid;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  left: 255px;
+  top: -18px;
+  .arrow {
+    background-color: transparent;
+    border-color: #259ea79d;
+    border-style: solid;
+    width: 30%;
+    height: 30%;
+    border-width: 8px 8px 0 0;
+    margin: 14px 10px;
+    transform: rotate(45deg);
+
+  }
+
 }
 
 

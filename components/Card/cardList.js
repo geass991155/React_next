@@ -11,6 +11,9 @@ const CardList = ({ children }) => (
       {children}
     </div>
   </div>
+  // <div className={styles.cardList}>
+  //      {children}
+  //  </div>
 );
 
 export default CardList;

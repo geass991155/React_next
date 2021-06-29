@@ -14,30 +14,29 @@ const FanCard = ({
 }) => {
   
   const children = ( 
-     <>
-      <div className={styles.fantitle}>
-        <h1>{subject}</h1>
-      </div>
-      <div className={styles.arrowbox}>
-        <div className={styles.arrow}></div>
-      </div>
-      <img src={'https://i.imgur.com/j56CGXH.png'} />
-      <div className={styles.imgcontent}>
-        <h3>測試測試測試測試文字測試測試測試測試文字測試測試測試測試文字</h3>
-      </div>
-      <div className={styles.singtext}>測試文字</div>
-      </>
+    <div className={styles.card}>
+      <img src={'https://i.imgur.com/R5BvfLB.jpg'} />
+      <h1>{subject}</h1>
+      <h2>說明說明說明說明說明說明說明說明說明說明說明說明</h2>
+    </div>
+    
   );
 
+  if (isOut) {
+    return (
+      <>
+      {children}
+      </>
+    );
+  }
+
   return (
-    <div className={styles.fan}>
     <Link href={to} as={as}>
       <a title={subject} href={to} className={`${styles.card} ${isAside ? styles.halfCard : ''}`}>
         {children}
       </a>
     </Link>
     
-    </div>
   );
 };
 
