@@ -3,7 +3,7 @@
 .embed_container {
     position: relative; /*定位，relative相對定位*/
     height: 0;
-    overflow: hidden;
+    // overflow: hidden;
     svg {
       width: 100%;
       @media all and (max-width: 767px) {

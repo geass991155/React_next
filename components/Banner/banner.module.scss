@@ -1,0 +1,58 @@
+@import '../../styles/global';
+@font-face {
+  font-family: "Sucrose Bold Two";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IM Fell French Canon Pro";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2") format("woff2");
+}
+
+.banner {
+  z-index: 100;
+  .banner_img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  @media screen and (max-width: 970px) {
+    width: 1100px;
+  }
+}
+.stop_img{
+  position: fixed;
+  right: 5%;
+  bottom: 15%;
+  top:5%;
+  z-index: 10;
+  height: 200px;
+}
+.img_gif {
+    position: fixed;
+    right: 5%;
+    bottom: 15%;
+    top:5%;
+    z-index: 10;
+    width: 190px;
+    height: 446px;
+    animation: thinking2  2s steps(9) infinite; 
+  
+}
+
+@keyframes thinking2 {
+  0% { background-position:    0; }
+  100% { background-position: -1710px 0;  } /**配合整個png的長度，上面img_gif的width乘上9倍*/
+}
+
+.gif_down {
+  composes: img_gif;
+  background-image: url(https://i.imgur.com/u14xnnj.png);
+  
+}
+
+.gif_up {
+  composes: img_gif;
+  background-image: url(https://i.imgur.com/xO7i5Y0.png);
+  
+}

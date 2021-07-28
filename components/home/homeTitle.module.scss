@@ -1,0 +1,26 @@
+@import '../../styles/global';
+
+.title {
+  position: relative;
+  text-align:center;
+  color: #ffa733;
+  font-size: 2rem;
+  margin-top: 100px;
+  
+}
+.line{
+  display: inline-block;
+  width: 500px;
+  height: 0px;
+  border: 2px solid #ffa733;
+  position: absolute;
+  margin-left: -250px;
+  top: 50px;
+  z-index: -1;
+}
+
+.distance {
+  background:rgb(255, 255, 255);
+  z-index: 1;
+  padding:0px 20px;
+}

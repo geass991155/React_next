@@ -7,6 +7,8 @@ import ScrollTop from '../components/scrollTop/scrollTop'
 import { useRouter } from "next/router";
 import Submenu from '../components/submenu/submenu';
 import Main from '../components/main/main';
+import Banner from '../components/Banner/Banner.js'
+import HomeTitle from '../components/home/homeTitle.js'
 
 export const content = [
   { title: "測試用文字1", text: "測試用內容" },
@@ -56,15 +58,18 @@ const firstpage = ({  }) => {
   return(
     <>
       <Submenu />
-      <Main>
+      <main>
+        <Banner/>
+        <HomeTitle title={"新鮮的肝"}/>
         <CardList>
           {items}
         </CardList>
+        <HomeTitle title={"地域入口"}/>
         <FanCardList>
           {fanitems}
         </FanCardList>
         <ScrollTop />
-      </Main>
+      </main>
     </>
   )
 }

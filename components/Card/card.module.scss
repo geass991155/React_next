@@ -4,7 +4,7 @@
   margin: 50px;
   float: left;
   width: 92%;
-  max-width: 340px;
+  max-width: 390px;
   position: relative;
   background-image: linear-gradient(150deg, #13547a 0%, #80d0c7 100%);
   color: rgb(112, 78, 78);
@@ -20,6 +20,10 @@
     .arrowbox{
       box-shadow:3px 3px 10px 7px rgba(103, 150, 144, 0.26);
     }
+  }
+
+  @media screen and (max-width: 775px) {
+    max-width: 340px;
   }
 
 }
@@ -38,7 +42,7 @@
 
 .card h1 {
   position: relative;
-  padding: 190px 0px 80px 10px;
+  padding: 200px 0px 80px 10px;
   width: 90%;
   
   transform: translate3d(20%, 0px, 0px);  

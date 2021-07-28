@@ -2,59 +2,96 @@
 
 
 .card {
-  margin: 50px;
+  // start_整體置中
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  // end_整體置中
+
   float: left;
-  width: 70%;
-  max-width: 780px;
+  width: 100%;
+  max-width: 950px;
   position: relative;
-  background-image: linear-gradient(to top, #d09693 0%, #c71d6f 100%);
+  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
   cursor: pointer;
-  margin: 200px 0px 200px 200px;
-  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+  margin: 200px 500px 200px 0px;
+  // transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
   border-radius: 20px;
   color: rgb(255, 255, 255);
   display: inline-block;
-  // padding: 60px;
-  &:hover{
+
+  &:hover,
+  &:focus,
+  &:active {
     // transform:scale(1.1,1.1);
     box-shadow:3px 3px 10px 7px #cccccc;
     
     img {
-      box-shadow:3px 3px 12px  #e7adaddc;
       transform:translateY(-27%);
+      
+    }
+    @media screen and (max-width: 961px) {
+      img {
+        transform:translateY(0%);
+        
+      }
     }
   }
+  @media screen and (max-width: 960px) {
+    margin: 100px 100px 250px 0px;
+  }
+  
 
 }
 
 .card h1 {
   position: relative;
-  padding: 250px 800px 0px 0px;
+  padding: 350px 0px 0px 0px;
   width: 90%;
   transform: translate3d(20%, 0px, 0px);  
   transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+  @media screen and (max-width: 960px) {
+    position: absolute;
+    left: -80px;
+    padding: 180px 0px 0px 0px;
+  }
 }
 
 .card h2 {
   position: absolute;
-  top : 150px;
+  top : 190px;
   left: 130px;
   width: 50%;
   transform: translate3d(20%, 0px, 0px);  
   transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+  @media screen and (max-width: 960px) {
+    position: relative;
+    top : 0px;
+    left: -90px;
+    width: auto;
+    padding: 250px 0px 0px 0px;
+  }
 }
 
 
 
 .card > img {
-  width: 70%;
+  width: 90%;
   position: absolute;
-  top: -15%;
-  left: 15%;
+  top: -35%;
+  left: 5%;
   z-index: 1;
   // padding:5px;
   border-radius: 20px;
-  transition: transform 0.4s ease-out;    
+  transition: transform 0.4s ease-out;  
+  box-shadow: 4px 3px 20px 10px#d299c277; 
   // transform: translate(0%, 150%);
   transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+
+  @media screen and (max-width: 960px) {
+    width: 80%;
+    left: 10%;
+    top: -55%;
+  }
+  
 }
