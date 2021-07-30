@@ -6,7 +6,7 @@ import subMenu from "./subMenu.json";
 
 const Submenu = () => {
   const { pathname } = useRouter();
-console.log(pathname);
+
   const menu = subMenu['ch'].map((e) => {
     const className = pathname.indexOf(e.name + '/') !== -1 ? `${styles.active}` : "";
 
@@ -26,7 +26,6 @@ console.log(pathname);
       </Link>
     );
   });
-
   return (
     <div className={styles.submenuWrapper}>
       <nav className={styles.submenu}>{menu}</nav>

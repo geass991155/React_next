@@ -12,11 +12,11 @@ import HomeTitle from '../components/home/homeTitle.js'
 
 export const content = [
   { title: "測試用文字1", text: "測試用內容" },
-  { title: "測試用文字1", text: "測試用內容" },  
-  { title: "測試用文字1", text: "測試用內容" },
-  { title: "測試用文字1", text: "測試用內容" }, 
-  { title: "測試用文字1", text: "測試用內容" },
-  { title: "測試用文字1", text: "測試用內容" },
+  { title: "測試用文字2", text: "測試用內容" },  
+  { title: "測試用文字3", text: "測試用內容" },
+  { title: "測試用文字4", text: "測試用內容" }, 
+  { title: "測試用文字5", text: "測試用內容" },
+  { title: "測試用文字6", text: "測試用內容" },
 ];
 
 export const fancontent = [
@@ -25,6 +25,7 @@ export const fancontent = [
   { title: "測試用文字3", text: "測試用內容" }, 
   { title: "測試用文字4", text: "測試用內容" },
   { title: "測試用文字5", text: "測試用內容" },
+  { title: "測試用文字6", text: "測試用內容" },
 ];
 
 const firstpage = ({  }) => {

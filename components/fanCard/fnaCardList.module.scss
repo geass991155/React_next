@@ -2,6 +2,7 @@
 
 .cardList {
   display: flex; /*容器、區塊，flex做宣告*/
+  flex-direction: column;
   flex-wrap: wrap; /*空間不夠換行*/
   align-items: center;
   
@@ -13,7 +14,7 @@
     margin: 50px;
   }
   @media all and (min-width: 1280px) {
-    margin: 50px auto;
+    margin: 100px auto;
   }
 }
 

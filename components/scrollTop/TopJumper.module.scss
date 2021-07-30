@@ -1,22 +1,79 @@
-.jumper {
+.scrollTop {
+  width: 50px;
+  height: 50px;
   position: fixed;
-  right: 11%;
-  bottom: 15%;
-  width: 42px;
-  height: 42px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 12px;
+  z-index: 2;
+  bottom: 50px;
+  background: url("./images/scrollTop.svg") no-repeat 0 0;
+  background-size: contain;
+  font-size: 0;
+  opacity: 0;
+  transform-origin: center center;
+  transform: scale(0.0);
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  pointer-events: none;
+  &:hover,
+  &:focus,
+  &:active {
+    transform: scale(1.2);
+  }
+  @media all and (max-width: 767px) {
+    width: 42px;
+    height: 42px;
+    right: 8px;
+  }
+  @media all and (min-width: 768px) and (max-width: 959px) {
+    right: 21px;
+  }
+  @media all and (min-width: 960px) and (max-width: 1439px) {
+    right: 30px;
+  }
+  @media all and (min-width: 1440px) {
+    right: 47px;
+  }
+}
+.scrollTopActive {
+  composes: scrollTop;
+  opacity: 1;
+  transform: scale(1.0);
+  pointer-events: auto;
+}
 
-  &:before {
-    content: '▲';
-    display: block;
-    text-align: center;
-    color: #aaa;
-    line-height: 42px;
-  }
-  &:hover:before {
-    content: '回頂端';
-  }
+.stop_img{
+  position: fixed;
+  right: 50px;
+  bottom: 15%;
+  top:20px;
+  z-index: 10;
+  height: 200px;
+}
+.img_gif {
+    position: fixed;
+    right: 50px;
+    bottom: 15%;
+    top:20px;
+    z-index: 10;
+    width: 190px;
+    height: 446px;
+    animation: thinking2  2s steps(9) infinite; 
+  
+}
+
+@keyframes thinking2 {
+  0% { background-position:    0; }
+  100% { background-position: -1710px 0;  } /**配合整個png的長度，上面img_gif的width乘上9倍*/
+}
+
+.gif_down {
+  composes: img_gif;
+  background-image: url(https://i.imgur.com/u14xnnj.png);
+  
+}
+
+.gif_up {
+  composes: img_gif;
+  background-image: url(https://i.imgur.com/xO7i5Y0.png);
+  
 }

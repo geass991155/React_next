@@ -1,12 +1,27 @@
 import React from 'react';
 import styles from './TopJumper.module.scss';
+import Link from '../link';
+import useScroll from '../useScroll';
 
-function scrollTop() {
+const ScrollTop = () => {
+  const isScroll = useScroll();
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <div className={styles.jumper} onClick={()=>window.scrollTo(0, 0)}>
-      <span className="text"> </span>
-    </div>);
-}
-
-export default scrollTop;
+    <Link
+      className={isScroll ? styles.scrollTopActive : styles.scrollTop}
+      to="#logo"
+      title="回頂端"
+      id="scrollToTop"
+      onClick={handleClick}
+    >
+      回頂端
+    </Link>
+  );
+};
+export default ScrollTop;
 

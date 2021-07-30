@@ -41,7 +41,7 @@
       top: -85px;
       z-index: -1;
       border-radius: 117px; //圓角邊
-      background-color: #EE8A51;
+      background-image: linear-gradient(to right, #ff8077b7 0%, #ff857ab0 0%, #ff8c7fb0 21%, #f99085bb 52%, #cf556bb6 78%, #b12a5ba9 100%);
       transition: background-color 0.4s ease-in-out, top 0.4s ease-in-out;
     }
     &:hover,
@@ -50,7 +50,7 @@
     &.active {
       color: #ff5c2a;
       &::before {
-        background-color: rgba(245, 176, 86, 0.733);
+        background-image: linear-gradient(to top, #a8ede9c0 0%, #fed6e3c2 100%);
         top: 0;
       }
     }
@@ -63,7 +63,7 @@
     a {
       width: 200px;
       height: 76px;
-      padding-top: 25px;
+      padding-top: 15px;
       font-size: 1.75rem;
       z-index: 2;
      
