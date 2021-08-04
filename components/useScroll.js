@@ -19,9 +19,10 @@ export default function useScroll(
           return 0;
       });
     };
-    window.addEventListener("scroll", scroll);
+    
+    document.body.addEventListener("scroll", scroll);
     return () => {
-      window.removeEventListener("scroll", scroll);
+      document.body.removeEventListener("scroll", scroll);
     };
   }, []);
   // end_是否為頂端

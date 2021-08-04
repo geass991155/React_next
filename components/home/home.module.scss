@@ -1,0 +1,22 @@
+.latestContainer {
+    box-sizing: border-box;
+    @media screen and (max-width: 767px) {
+      padding: 15px 27px 0;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 38px 84px 0;
+    }
+    @media screen and (min-width: 960px) {
+    //   display: flex;
+    //   flex-wrap: nowrap;
+    //   justify-content: space-between;
+    //   padding: 22px 84px 0;
+    //   width: 100%;
+    //   & > div {
+    //     width: calc(50% - 22px);
+    //   }
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 34px 110px 0;
+    }
+  }

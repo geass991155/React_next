@@ -3,7 +3,7 @@ a {
 }
 html {
   /* 為了讓移動裝置的工具列不會縮起來 */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
     Helvetica, sans-serif;
 
   /* 為了讓移動裝置的工具列不會縮起來 */
-  /* position: fixed; */
+  position: fixed;
   /* overflow-x: hidden; */
   overflow-y: scroll;
   height: 100%;

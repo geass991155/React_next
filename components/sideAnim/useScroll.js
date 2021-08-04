@@ -1,54 +1,54 @@
 import { useEffect, useState } from "react";
 
-export default function useScroll() {
+export default function useScroll(selector = ".anchor") {
     const [scrollEnd, setScrollEnd] = useState(true);
     useEffect(() => {
       setScrollEnd(true);
     }, []);
-  
-    // start_滾輪是否移動
+
     let timer = null;
     let t1= 0;
     let t2= 0;
+    const [lastScrollY, saveLastScrollY] = useState(0); // keep the last Y position
+    const [number,setNumber] = useState(0); // 0為down,1為up
+    
     useEffect(() => {
-      document.onscroll = function() {
+      const scroll = () => {
+        // 上下滾動
+        saveLastScrollY(() => {
+          const currentScroll = document.querySelector(selector).getBoundingClientRect().top;
+          if (currentScroll < lastScrollY) {
+            setNumber(0);
+          } else {
+            setNumber(1);
+          }
+          if (currentScroll < 0) {
+            return currentScroll;
+          }
+            return 0;
+        });
+
+        // 是否停止滑動
         clearTimeout(timer);
         // 1s後執行isScrollEnd
         timer = setTimeout(isScrollEnd, 1000);
-        t1 = document.documentElement.scrollTop || document.body.scrollTop;
+        t1 = document.querySelector(selector).getBoundingClientRect().top;
+      };
+
+      // 是否停止滑動
+      const isScrollEnd = (e) => {
+        t2 = document.querySelector(selector).getBoundingClientRect().top;
+        if(t2 == t1){
+          setScrollEnd(false);
+        }  
       }
-    }, []);
-    const isScrollEnd = (e) => {
-      t2 = document.documentElement.scrollTop || document.body.scrollTop;
-      if(t2 == t1){
-        setScrollEnd(false);
-      }  
-    }
-    // end_滾輪是否移動
-  
-    // start_上下監聽滾輪事件
-    const [lastScrollY, saveLastScrollY] = useState(0); // keep the last Y position
-    const [number,setNumber] = useState(0); // 0為down,1為up
-  
-    const updateScroll = () => {
-      // 更新
-      const currentScroll = window.pageYOffset; // 現在的Y軸位置
-      if (currentScroll > lastScrollY) {
-        setNumber(0);
-      } else {
-        setNumber(1);
-      }
-      saveLastScrollY(currentScroll > 0 ? currentScroll : 0);
-    };
-    
-    useEffect(() => {
+      
       setScrollEnd(true);
-      window.addEventListener("scroll", updateScroll);
+      document.body.addEventListener("scroll", scroll);
       return () => {
-        window.removeEventListener("scroll", updateScroll);
+        document.body.removeEventListener("scroll", scroll);
       };
     }, [lastScrollY]);
-    // end_上下監聽滾輪事件
     
   return [scrollEnd,number,lastScrollY];
 }

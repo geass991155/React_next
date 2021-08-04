@@ -9,6 +9,7 @@ const FanCard = ({
   to,
   as,
   subject,
+  content,
   isOut,
   isAside,
 }) => {
@@ -17,7 +18,7 @@ const FanCard = ({
     <div className={styles.card}>
       <img src={'https://i.imgur.com/R5BvfLB.jpg'} />
       <h1>{subject}</h1>
-      <h2>說明說明說明說明說明說明說明說明說明說明說明說明</h2>
+      <h2>{content}</h2>
     </div>
     
   );
