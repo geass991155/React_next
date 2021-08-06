@@ -7,10 +7,11 @@
   font-size: 2rem;
   margin-top: 100px;
 
-  &::after {
+  &::after,
+  &::before {
     content: "";
     display: inline-block;
-    width: 500px;
+    width: 100px;
     height: 0px;
     border: 2px solid #ffa733;
     position: absolute;
@@ -18,11 +19,9 @@
     top: 50px;
     z-index: -1;
   }
+  &::after{
+    margin-left: 150px;
+  }
   
 }
 
-.distance {
-  background:rgb(255, 255, 255);
-  z-index: 1;
-  padding:0px 20px;
-}
