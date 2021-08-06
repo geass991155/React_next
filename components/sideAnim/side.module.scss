@@ -15,6 +15,14 @@
   top:20px;
   z-index: 10;
   height: 200px;
+  @media (max-width: 1200px) {
+    right: 10px;
+    height: 120px;
+  }
+  @media (max-width: 959px) {
+    left: 10px;
+    height: 100px;
+  }
 }
 .img_gif {
     position: fixed;
@@ -25,6 +33,12 @@
     width: 190px;
     height: 446px;
     animation: thinking2  2s steps(9) infinite; 
+    @media (max-width: 1200px) {
+      right: 10px;
+    }
+    @media (max-width: 959px) {
+      left: 10px;
+    }
   
 }
 

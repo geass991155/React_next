@@ -1,4 +1,6 @@
 .submenuWrapper {
+  display: block;
+  height: 42px;
   width: auto;
   // box-shadow: 25px 30px 30px 0 rgba(209, 28, 28, 0.966);
   float: left;
@@ -71,6 +73,19 @@
         width: 158px;
         height: 158px;
         left: calc((725px - 687px) / 2);
+        @media (max-width: 1200px) {
+          top: -75px;
+          width: 140px;
+          height: 140px;
+          left: calc((725px - 710px) / 2);
+        }
+      }
+
+      @media (max-width: 1200px) {
+        width: 160px;
+        height: 66px;
+        padding-top: 10px;
+        font-size: 1.55rem;
       }
     }
   }

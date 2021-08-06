@@ -1,23 +1,23 @@
 {
   "ch": [
     {
-      "name": "card",
+      "name": "商品",
       "href": "/card"
     },
     {
-      "name": "story",
+      "name": "故事",
       "href": "/story"
     },
     {
-      "name": "product",
+      "name": "活動",
       "href": "/product"
     },
     {
-      "name": "news",
+      "name": "消息",
       "href": "/news"
     },
     {
-      "name": "activty",
+      "name": "不知道",
       "href": "/activty"
     }
   ],

@@ -6,17 +6,19 @@
   color: #ffa733;
   font-size: 2rem;
   margin-top: 100px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 500px;
+    height: 0px;
+    border: 2px solid #ffa733;
+    position: absolute;
+    margin-left: -250px;
+    top: 50px;
+    z-index: -1;
+  }
   
-}
-.line{
-  display: inline-block;
-  width: 500px;
-  height: 0px;
-  border: 2px solid #ffa733;
-  position: absolute;
-  margin-left: -250px;
-  top: 50px;
-  z-index: -1;
 }
 
 .distance {

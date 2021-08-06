@@ -10,6 +10,7 @@ import Main from '../components/main/main';
 import Banner from '../components/Banner/Banner.js'
 import HomeTitle from '../components/home/homeTitle.js'
 import styles from "../components/home/home.module.scss";
+import Hamburger from '../components/header/hamburger.js'
 
 export const fancontent = [
   { title: "測試用文字1", text: "測試用內容" },
@@ -22,7 +23,7 @@ export const fancontent = [
 
 const firstpage = ({data}) => {
   const { asPath, query } = useRouter();
-    const fanitems = data.map((e) => (
+    const fanitems = fancontent.map((e) => (
       <FanCard
         key={`FanCard-${e.id}`}
         to={`card/${e.id}`}
@@ -50,7 +51,14 @@ const firstpage = ({data}) => {
   
   return(
     <>
-      <Submenu />
+      <div className={styles.menu}>
+        <Submenu />
+      </div>
+
+      <div className={styles.menuMobile}>
+        <Hamburger />
+      </div>
+
       <main>
         <Banner/>
         <div className={styles.latestContainer}>

@@ -6,7 +6,6 @@ const homeTitle = ({title}) => {
   const children= (  
     <div className={styles.title}>
     <h1><span className={styles.distance}>{title}</span></h1>
-    <div className={styles.line}></div>
     </div>
   );
 

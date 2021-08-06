@@ -20,3 +20,22 @@
       padding: 34px 110px 0;
     }
   }
+
+.menu {
+  @media (max-width: 959px) {
+    height: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+.menuMobile {
+  @media (max-width: 959px) {
+    display: block;
+  }
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}

@@ -31,7 +31,7 @@
       transform:translateY(-27%);
       
     }
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: 1024px) {
       img {
         transform:translateY(0%);
         
@@ -39,6 +39,10 @@
     }
   }
   @media screen and (max-width: 960px) {
+    margin: 100px 100px 250px 0px;
+  }
+
+  @media screen and (min-width: 961px) and (max-width: 1024px) {
     margin: 100px 100px 250px 0px;
   }
   
@@ -56,6 +60,13 @@
     left: -80px;
     padding: 180px 0px 0px 0px;
   }
+  @media screen and (min-width: 961px) and (max-width: 1024px) {
+    left: -80px;
+    padding: 250px 0px 0px 0px;
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1148px) {
+    padding: 300px 0px 0px 0px;
+  }
 }
 
 .card h2 {
@@ -71,6 +82,16 @@
     left: -90px;
     width: auto;
     padding: 250px 0px 0px 0px;
+  }
+  @media screen and (min-width: 961px) and (max-width: 1024px) {
+    position: relative;
+    top : 0px;
+    left: -90px;
+    width: auto;
+    padding: 10px 0px 0px 0px;
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1148px) {
+    top : 150px;
   }
 }
 
@@ -92,7 +113,6 @@
   @media screen and (max-width: 960px) {
     width: 80%;
     left: 10%;
-    top: -55%;
   }
   
 }
