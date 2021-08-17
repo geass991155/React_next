@@ -8,7 +8,7 @@ const ScrollTop = () => {
   
   const handleClick = (e) => {
     e.preventDefault();
-    window.scrollTo(0, 0);
+    document.body.scrollTo(0, 0);
   };
 
   return (

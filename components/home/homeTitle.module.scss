@@ -6,22 +6,43 @@
   color: #ffa733;
   font-size: 2rem;
   margin-top: 100px;
+  text-shadow: 0.1em 0.1em 0.2em rgb(110, 110, 110);
 
-  &::after,
   &::before {
     content: "";
     display: inline-block;
-    width: 100px;
-    height: 0px;
-    border: 2px solid #ffa733;
+    width: 500px;
+    height: 90px;
+    background-color: rgba(238, 201, 81, 0.89);
+    background-blend-mode: multiply;
+    background-image: url("https://i.imgur.com/8BZ9fcR.jpg");
+    opacity:0.5;
+    background-size: cover;
     position: absolute;
-    margin-left: -250px;
-    top: 50px;
+    margin-left: -10px;
+    bottom: 10px;
     z-index: -1;
+    transform: skewX(-30deg);
   }
   &::after{
-    margin-left: 150px;
+    content: "";
+    display: inline-block;
+    width: 500px;
+    height: 90px;
+    border: 2px solid #72c4b6;
+    position: absolute;
+    margin-left: -23px;
+    bottom: 23px;
+    z-index: -2;
+    transform: skewX(-30deg);
   }
   
+}
+
+@keyframes title {
+  // 時間從0到100%要做的事情
+  0% { transform: scale(0, 0) translateY(0);}
+  50% { transform: scale(1, 1) translateY(0);}
+  100% { transform: scale(1, 1) translateY(0);}
 }
 
