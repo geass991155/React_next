@@ -1,0 +1,90 @@
+.wrapper {
+  @media all and (max-width: 767px) {
+    padding: calc(20px + 60px + 17px) 11px 0;
+  }
+  @media all and (min-width: 768px) and (max-width: 959px) {
+    padding: calc(20px + 60px + 31px) 36px 0;
+  }
+  @media all and (min-width: 960px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @media all and (min-width: 960px) and (max-width: 1099px) {
+    padding: calc(59px + 60px + 25px) 50px 0;
+  }
+  @media all and (min-width: 1100px) and (max-width: 1279px) {
+    padding: calc(59px + 70px + 25px) 50px 0;
+  }
+  @media all and (min-width: 1280px) and (max-width: 1439px) {
+    padding: calc(59px + 80px + 25px) 60px 0;
+  }
+  @media all and (min-width: 1440px) and (max-width: 1679px) {
+    padding: calc(59px + 90px + 25px) 70px 0;
+  }
+  @media all and (min-width: 1680px) and (max-width: 1919px) {
+    padding: calc(59px + 100px + 25px) 80px 0;
+  }
+  @media all and (min-width: 1920px) {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: calc(59px + 100px + 25px) 135px 0;
+  }
+}
+
+.section {
+  max-width: 1183px;
+  margin: 0 auto;
+  min-height: 100vh;
+  
+  @media all and (min-width: 960px) and (max-width: 1439px) {
+    width: calc(100% - 300px - 20px);
+  }
+  @media all and (min-width: 1440px) {
+    width: calc(100% - 423px - 43px);
+  }
+  h2 {
+    font-weight: 700;
+    line-height: 1;
+    @media all and (max-width: 499px) {
+      font-size: 1.125rem;
+      padding-left: 6px;
+    }
+    @media all and (min-width: 450px) and (max-width: 959px) {
+      font-size: 2.25rem;
+      padding-left: 11px;
+    }
+    @media all and (min-width: 960px) {
+      font-size: 2.875rem;
+      padding-left: 14px;
+    }
+  }
+}
+.aside {
+  height: auto;
+  min-height: 50vh;
+
+  @media all and (max-width: 959px) {
+    display: none;
+  }
+  @media all and (min-width: 960px) and (max-width: 1439px) {
+    width: 300px;
+    margin-left: 20px;
+  }
+  @media all and (min-width: 1440px) {
+    width: 423px;
+    margin-left: 43px;
+  }
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 37px;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
